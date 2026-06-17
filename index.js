@@ -39,8 +39,12 @@ app.get('/user/:name', (req, res) => {
 app.post('/contact', (req, res) => {
     console.log(req.body);
     res.send('Message Received');
-
 });
+
+// Download route
+app.get('/download', (req,res) => {
+    res.download('./public/henny-as-simpson.PNG');
+}); 
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
