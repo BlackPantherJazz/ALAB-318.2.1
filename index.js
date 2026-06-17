@@ -12,6 +12,13 @@ app.use(express.urlencoded({extended:true}));
 // Serve static files from the publuc folder
 app.use(express.static('public'));
 
+// Custom logging middleware
+app.use((req, res, next) => {
+   console.log(`${req.method} ${req.url} - ${new Date().toLocaleTimeString()}`);
+   next()
+}
+)
+
 //Home route
 app.get('/', (req, res) => {
     res.render('home');
