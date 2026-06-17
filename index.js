@@ -28,6 +28,13 @@ app.get('/user/:name', (req, res) => {
     res.render('user', {name});
 });
 
+// POST route for contact form
+app.post('/contact', (req, res) => {
+    console.log(req.body);
+    res.send('Message Received');
+
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 

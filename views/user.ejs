@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>User Profile</title>
+  <title>About</title>
 </head>
 <body>
   <nav>
@@ -10,7 +10,16 @@
     <a href="/about">About</a>
   </nav>
 
-  <h1>Hello, <%= name %>!</h1>
-  <p>This page was made just for you.</p>
+  <h1>About Me</h1>
+  <p>I'm Henny, a software engineering student who loves music, art, and anime.</p>
+
+  <h2>Contact Me</h2>
+  <form method="POST" action="/contact">
+    <label>Name:</label><br>
+    <input type="text" name="name"><br><br>
+    <label>Message:</label><br>
+    <textarea name="message"></textarea><br><br>
+    <button type="submit">Send</button>
+  </form>
 </body>
-</html>                                              
+</html>
