@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3000;
 
 // Set EJS as the view engine
-app.set('view engine', ejs)
+app.set('view engine', 'ejs');
 
 // Middleware to parse
 app.use(express.urlencoded({extended:true}));
@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 //Home route
 app.get('/', (req, res) => {
-    res.send('Server is running!');
+    res.render('home');
 });
 
 app.listen(PORT, () => {
