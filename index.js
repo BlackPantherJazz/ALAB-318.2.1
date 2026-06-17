@@ -22,6 +22,12 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
+// Route with parameter
+app.get('/user/:name', (req, res) => {
+    const name = req.params.name
+    res.render('user', {name});
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 
